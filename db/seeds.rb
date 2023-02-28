@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# Destroy squids
+# puts "Destroy all squids"
+# Squid.destroy_all
+# puts "All squids succesfully destroyed"
+
+# # Destroy users
+# puts "Destroy all users"
+# User.destroy_all
+# puts "All users succesfully destroyed"
+
+# # Destroy bookings
+# puts "Destroy all bookings"
+# Booking.destroy_all
+# puts "All bookings succesfully destroyed"
