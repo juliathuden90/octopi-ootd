@@ -1,16 +1,28 @@
-<h1>Squids#index</h1>
-
 <%# @squids.each do |squid| %>
 <%#= squid.name %>
 <%# end %>
 
-<div class="squid-list">
-  <ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Squids#index</h1>
+    <link rel="stylesheet" type="text/scss" href="/assets/styles.scss">
+    <script type="text/javascript" src="/assets/scripts.js"></script>
+  </head>
+  <body>
+    <div class="card-container">
     <% @squids.each do |squid| %>
-      <li>
-        <%= squid.name %>
-        <%= image_tag("squid#{squid.id}.jpg") %>
-      </li>
-    <% end %>
-  </ul>
+    <div class="card">
+      <%= cl_image_tag squid.photo.key, height: 250, width: 400, crop: :fill, alt: squid.name %>
+      <div class="card-info">
+        <div class="card-info-container">
+          <h2><%= squid.name %></h2>
+          <span class="card-price">$<%= squid.price %> per night</span>
+        </div>
+        <p><%= squid.description %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
+  </body>
+</html>
