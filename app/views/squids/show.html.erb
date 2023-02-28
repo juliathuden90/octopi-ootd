@@ -1,4 +1,15 @@
-<h1>Squids#show</h1>
-<%= @squid.name %>
-
-<%= cl_image_tag @squid.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="container">
+  <h1><%= @squid.name %></h1>
+  <br>
+  <div class="show-page-container">
+    <%= cl_image_tag @squid.photo.key, height: 550, width: 650, crop: :fill %>
+      <div class="show-page-text">
+        <h2>Description</h2>
+        <p><%= @squid.description %></p>
+        <br>
+        <br>
+        <h2>$<%= @squid.price %> / day</h2>
+        <div class="btn btn-flat"> BOOK NOW </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.show-page-container {
+  display: flex;
+}
+
+.show-page-image {
+  width: 50%;
+  height: 80vh; // maybe change this later
+  object-fit: cover;
+}
+
+.show-page-text {
+  display: flex;
+  padding: 40px;
+  width: 80%;
+  flex-direction: column;
+  justify-content: left;
+  margin: auto;
+
+  .btn-flat {
+    width: fit-content;
+  }
+}
