@@ -1,7 +1,9 @@
 class SquidsController < ApplicationController
   before_action :set_squid, only: [:show]
+  before_action :set_user
+  skip_before_action :authenticate_user!, only: [:home, :index, :show]
+
   def home
-    @user = current_user
   end
 
   def index
@@ -17,10 +19,8 @@ class SquidsController < ApplicationController
 
   def create
     @squid = Squid.new(squid_params)
-    # TODO: need to add user to squid
-    user = User.find(1)
+    user = current_user
     @squid.user = user
-
     if @squid.save
       redirect_to squid_path(@squid)
     else
@@ -36,5 +36,9 @@ class SquidsController < ApplicationController
 
   def squid_params
     params.require(:squid).permit(:name, :description, :price, :photo)
+  end
+
+  def set_user
+    @user = current_user
   end
 end
