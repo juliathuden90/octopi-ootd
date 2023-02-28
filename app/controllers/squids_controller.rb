@@ -1,6 +1,7 @@
 class SquidsController < ApplicationController
   before_action :set_squid, only: [:show]
   def home
+    @user = current_user
   end
 
   def index
