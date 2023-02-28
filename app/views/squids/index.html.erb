@@ -1,5 +1,16 @@
 <h1>Squids#index</h1>
 
-<% @squids.each do |squid| %>
-<%= squid.name %>
-<% end %>
+<%# @squids.each do |squid| %>
+<%#= squid.name %>
+<%# end %>
+
+<div class="squid-list">
+  <ul>
+    <% @squids.each do |squid| %>
+      <li>
+        <%= squid.name %>
+        <%= image_tag("squid#{squid.id}.jpg") %>
+      </li>
+    <% end %>
+  </ul>
+</div>
