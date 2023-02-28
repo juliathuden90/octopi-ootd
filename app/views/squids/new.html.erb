@@ -6,7 +6,9 @@
     <%= f.input :description %>
     <%= f.input :price %>
     <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class: 'btn btn-flat', style: 'font-weight: bold;' %>
-  <% end %>
-  <%= link_to "Cancle", squids_path %>
+    <div class="cancle-btn-div">
+      <%= f.button :submit, class: 'btn btn-flat', style: 'font-weight: bold;' %>
+    <% end %>
+      <%= link_to "Cancle", squids_path, class:"btn btn-flat", style: 'font-weight: bold;' %>
+    </div>
 </div>
