@@ -1,11 +1,12 @@
 <div class="container">
-  <h1>Squids#new</h1>
+  <h1>Create a new Octoπ</h1>
 
   <%= simple_form_for(@squid) do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :price %>
-    <%= f.input :image_url %>
+    <%= f.input :photo, as: :file %>
     <%= f.button :submit, class: 'btn btn-flat', style: 'font-weight: bold;' %>
   <% end %>
+  <%= link_to "Cancle", squids_path %>
 </div>

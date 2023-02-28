@@ -1,2 +1,4 @@
 <h1>Squids#show</h1>
 <%= @squid.name %>
+
+<%= cl_image_tag @squid.photo.key, height: 300, width: 400, crop: :fill %>

@@ -16,8 +16,9 @@ class SquidsController < ApplicationController
 
   def create
     @squid = Squid.new(squid_params)
-
     # TODO: need to add user to squid
+    user = User.find(1)
+    @squid.user = user
 
     if @squid.save
       redirect_to squid_path(@squid)
@@ -33,6 +34,6 @@ class SquidsController < ApplicationController
   end
 
   def squid_params
-    params.require(:squid).permit(:name, :description, :price, :image_url)
+    params.require(:squid).permit(:name, :description, :price, :photo)
   end
 end
