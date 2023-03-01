@@ -2,7 +2,7 @@
   <br>
   <h1>New Booking</h1>
 
-  <%= simple_form_for(@booking) do |f| %>
+  <%= simple_form_for [@squid, @booking] do |f| %>
     <%= f.input :rent_date %>
     <br>
     <div class="cancle-btn-div">
