@@ -26,7 +26,7 @@ puts "All users succesfully destroyed"
 # Create Users
 puts "creating Users"
 
-file = URI.open("https://www.koreaboo.com/lists/bts-suga-heartwarming-advice/#image")
+file = URI.open("https://lh3.googleusercontent.com/7tIF282v4iWX9XYW5sk19CSDBgAZpbVnwHC5X_OsXSueS32ZEEoxs2TEh0BVIEQ2tk1k513me7mU0YbQMwy57UHhETxCGsZtWmmb-77P2G49VA=w960-rj-nu-e365")
 addy = User.new(first_name: "Adlina", last_name: "Basuki", email: "adlina@gmail.com", password: "password")
 addy.photo.attach(io: file, filename: "addy.png", content_type: "image/png")
 addy.save
