@@ -4,6 +4,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   margin: 20px;
+  flex-wrap: wrap;
 }
 
 a {
@@ -21,7 +22,9 @@ a:hover {
   border: 1px solid #ccc;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
+  height: 400px;
+  flex: 1 1 300px;
 }
 
 .card img {
