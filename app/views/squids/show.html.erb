@@ -8,6 +8,7 @@
         <h2>Description</h2>
         <p><%= @squid.description %></p>
         <br>
+        <p><strong>Owner:</strong> <%= @squid.user.first_name %></p>
         <br>
         <h2>$<%= @squid.price %> / day</h2>
         <%= link_to "BOOK NOW", new_booking_path, class: "btn btn-flat" %>
