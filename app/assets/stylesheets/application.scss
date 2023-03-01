@@ -18,3 +18,11 @@ h1, h2 {
 p {
     font-weight: 400;
 }
+
+body {
+  background-color: #dbdbdd8a;
+  background-image: asset-url('background-pages.jpeg');
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

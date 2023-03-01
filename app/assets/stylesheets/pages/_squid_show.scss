@@ -1,11 +1,13 @@
 .show-page-container {
   display: flex;
+  border-radius: 5px;
 }
 
 .show-page-image {
   width: 50%;
   height: 80vh; // maybe change this later
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .show-page-text {
