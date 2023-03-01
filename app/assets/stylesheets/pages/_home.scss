@@ -1,6 +1,8 @@
 // Specific CSS for your home-page
 .landing-page-container {
     display: flex;
+    height: 100vh;
+    text-align: center;
 }
 
 .landing-page-image {
@@ -14,13 +16,14 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    
+    align-items: center;
+
     .btn-flat {
         width: fit-content;
+        padding: 10px 100px;
     }
 }
 
 body {
     background-color: #FDF4D5;
   }
-  
