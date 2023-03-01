@@ -1,5 +1,13 @@
 <div class="container">
-<br>
-<h1>Coming Soon...</h1>
-<p>you will soon be able to book an octopus 🐙<p>
+  <br>
+  <h1>New Booking</h1>
+
+  <%= simple_form_for(@booking) do |f| %>
+    <%= f.input :rent_date %>
+    <br>
+    <div class="cancle-btn-div">
+      <%= f.button :submit, class: 'btn btn-flat', style: 'font-weight: bold;' %>
+    <% end %>
+      <%= link_to "Cancel", bookings_path, class:"btn btn-flat", style: 'font-weight: bold;' %>
+    </div>
 </div>

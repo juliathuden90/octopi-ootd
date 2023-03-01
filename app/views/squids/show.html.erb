@@ -11,7 +11,7 @@
         <p><strong>Owner:</strong> <%= @squid.user.first_name %></p>
         <br>
         <h2>$<%= @squid.price %> / day</h2>
-        <%= link_to "BOOK NOW", new_booking_path, class: "btn btn-flat" %>
+        <%= link_to "BOOK NOW", new_squid_booking_path(@squid.id), class: "btn btn-flat" %>
       </div>
   </div>
 </div>

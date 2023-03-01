@@ -1,13 +1,15 @@
 class BookingsController < ApplicationController
-  before_action :set_user
-  
+  before_action :set_user, only: [:create]
+  before_action :set_booking, only: [:create]
+
   def index
   end
 
-  def new
+  def create
   end
 
-  def create
+  def new
+    @booking = Booking.new
   end
 
   def update
@@ -17,6 +19,18 @@ class BookingsController < ApplicationController
   end
 
   private
+
+  def set_squid
+    @squid = Squid.find(params[:squid_id])
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+  def booking_params
+    params.require(:booking).permit(:rent_date)
+  end
 
   def set_user
     @user = current_user
