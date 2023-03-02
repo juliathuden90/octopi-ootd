@@ -96,4 +96,14 @@ squid_nine = Squid.new(name: "Tako", description: "Your imagination is the only 
 squid_nine.photo.attach(io: file, filename: "squid_nine.png", content_type: "image/png")
 squid_nine.save
 
-puts "Created #{Squid.count} users"
+puts "Created #{Squid.count} squids"
+
+# Create bookings
+puts "Creating bookings"
+
+booking_one = Booking.new(rent_date: Date.today, user: jensen, squid: squid_seven, status: "pending")
+booking_one.save
+booking_two = Booking.new(rent_date: Date.today, user: addy, squid: squid_seven, status: "pending")
+booking_two.save
+
+puts "Created #{Booking.count} bookings"
