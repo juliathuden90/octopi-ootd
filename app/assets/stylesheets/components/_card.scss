@@ -23,9 +23,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   // justify-content: space-between;
-  height: 300px;
   flex: 1 1 300px;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 
@@ -38,6 +37,11 @@ a:hover {
 
 .card .card-info {
   padding: 10px;
+
+  .card-info-description {
+    height: 2lh;
+    overflow: hidden;
+  }
 }
 
 .card .card-info h2 {
