@@ -6,8 +6,9 @@
     <%= f.input :rent_date %>
     <br>
     <div class="cancle-btn-div">
-      <%= f.button :submit, class: 'btn btn-flat', style: 'font-weight: bold;' %>
+      <%= f.button :submit, class: 'btn btn-flat', value: "Book Now" %>
     <% end %>
-      <%= link_to "Cancel", bookings_path, class:"btn btn-flat", style: 'font-weight: bold;' %>
+      <%# <%= link_to "Book Now", squid_path(@squid), class:"btn btn-flat" %>
+      <%= link_to "Cancel", bookings_path, class:"btn btn-flat" %>
     </div>
 </div>
