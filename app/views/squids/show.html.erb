@@ -1,18 +1,17 @@
 <div class="container">
-  <br>
-  <h1><%= @squid.name %></h1>
-  <br>
+<br>
+<br>
   <div class="show-page-container">
-     <% if @squid.photo.key.nil? %>
-        <%= image_tag "octopus-missing.avfi", height: 550, width: 650, crop: :fill %>
+      <% if @squid.photo.key.nil? %>
+        <%= image_tag "octopus-missing.avfi", class: "show-page-image" %>
       <% else %>
-        <%= cl_image_tag @squid.photo.key, height: 550, width: 650, crop: :fill %>
+        <%= cl_image_tag @squid.photo.key, class: "show-page-image" %>
       <% end %>
       <div class="show-page-text">
-        <h2>Description</h2>
-        <p><%= @squid.description %></p>
-        <br>
+        <h1><%= @squid.name %></h1>
         <p><strong>Owner:</strong> <%= @squid.user.first_name %></p>
+        <br>
+        <p class="flex-grow-1"><%= @squid.description %></p>
         <br>
         <h2>$<%= @squid.price %> / day</h2>
         <%= link_to "BOOK NOW", new_squid_booking_path(@squid.id), class: "btn btn-flat" %>

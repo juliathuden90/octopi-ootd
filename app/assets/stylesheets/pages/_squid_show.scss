@@ -1,24 +1,31 @@
 .show-page-container {
   display: flex;
   border-radius: 5px;
+  padding: 40px;
+  background-color: #e6d3f8a8;
+  background-blend-mode: overlay;
 }
 
 .show-page-image {
-  width: 50%;
-  height: 80vh; // maybe change this later
-  object-fit: cover;
   border-radius: 5px;
+  height: 550px;
+  width: 50%;
+  object-fit: cover;
+  // margin-bottom: 55px;
 }
 
 .show-page-text {
   display: flex;
   padding: 40px;
-  width: 80%;
+  width: 50%;
   flex-direction: column;
-  justify-content: left;
-  margin: auto;
+  justify-content: center;
 
   .btn-flat {
     width: fit-content;
+    padding: 12px 50px;
   }
+
+.booking-container {
+}
 }
