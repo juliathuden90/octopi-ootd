@@ -15,7 +15,9 @@
             <h3><strong> <%= squid.name %> </strong></h3>
             <span class="card-price">$<%= squid.price %> / day</span>
           </div>
-          <p><%= squid.description.truncate(80) %></p>
+          <div class="card-info-description">
+            <p><%= squid.description.truncate(80) %></p>
+          </div>
         </div>
       </div>
     <% end %>
