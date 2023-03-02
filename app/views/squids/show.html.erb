@@ -14,7 +14,8 @@
         <p class="flex-grow-1"><%= @squid.description %></p>
         <br>
         <h2>$<%= @squid.price %> / day</h2>
-        <%= link_to "BOOK NOW", new_squid_booking_path(@squid.id), class: "btn btn-flat" %>
+        <%# <%= link_to "BOOK NOW", new_squid_booking_path(@squid.id), class: "btn btn-flat" %>
+        <%= render "bookings/new_squid_booking" %>
       </div>
   </div>
 </div>

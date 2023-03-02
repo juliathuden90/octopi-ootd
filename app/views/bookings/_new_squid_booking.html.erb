@@ -1,14 +1,9 @@
-<div class="container">
-  <br>
-  <h1>New Booking</h1>
-
   <%= simple_form_for [@squid, @booking] do |f| %>
     <%= f.input :rent_date %>
     <br>
     <div class="cancle-btn-div">
       <%= f.button :submit, class: 'btn btn-flat', value: "Book Now" %>
-    <% end %>
+  <% end %>
       <%# <%= link_to "Book Now", squid_path(@squid), class:"btn btn-flat" %>
-      <%= link_to "Cancel", bookings_path, class:"btn btn-flat" %>
+      <%= link_to "Cancel", squids_path, class:"btn btn-flat" %>
     </div>
-</div>
