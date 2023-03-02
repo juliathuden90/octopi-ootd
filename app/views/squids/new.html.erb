@@ -1,16 +1,16 @@
-<div class="container">
+<div class="container text-center">
   <br>
-  <h1>Create a new Octoπ</h1>
+  <h2>Create a new Octoπ</h2>
 
-  <%= simple_form_for(@squid) do |f| %>
+  <%= simple_form_for(@squid, html: { class: "text-start" }) do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :price %>
     <%= f.input :photo, as: :file %>
     <br>
     <div class="cancle-btn-div">
-      <%= f.button :submit, class: 'btn btn-flat', style: 'font-weight: bold;' %>
-    <% end %>
+      <%= f.button :submit, class: 'btn btn-flat', style: 'font-weight: bold; margin-right: 10px' %>
       <%= link_to "Cancel", squids_path, class:"btn btn-flat", style: 'font-weight: bold;' %>
     </div>
+  <% end %>
 </div>
