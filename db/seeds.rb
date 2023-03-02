@@ -77,7 +77,7 @@ squid_five.photo.attach(io: file, filename: "squid_five.png", content_type: "ima
 squid_five.save
 
 file = URI.open("https://images.unsplash.com/photo-1583902902560-9e8e2fede645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
-squid_six = Squid.new(name: "Suprise", description: "A gamble to book this one", price: 1000, user_id: julia.id)
+squid_six = Squid.new(name: "Suprise", description: "A gamble to book this one", price: 1000, user_id: felicia.id)
 squid_six.photo.attach(io: file, filename: "squid_six.png", content_type: "image/png")
 squid_six.save
 
