@@ -1,16 +1,20 @@
 
 <div class="container">
   <%# <h1>Squids#index</h1> %>
-    <div class="card-container">
-      <% @squids.each do |squid| %>
-    <a href="<%= url_for(squid) %>">
-    <div class="card">
-      <%= cl_image_tag squid.photo.key, height: 250, width: 400, crop: :fill, alt: squid.name %>
-      <div class="card-info">
-        <div class="card-info-container">
-          <h2><%= squid.name %></h2>
-          <span class="card-price">$<%= squid.price %> per day</span>
-        </div>
+  <div class="card-container">
+    <% @squids.each do |squid| %>
+      <a href="<%= url_for(squid) %>">
+      <div class="card">
+      <% if squid.photo.key.nil? %>
+        <%= image_tag "octopus-missing.avfi", height: 250, width: 400, crop: :fill, alt: squid.name %>
+      <% else %>
+        <%= cl_image_tag squid.photo.key, height: 250, width: 400, crop: :fill, alt: squid.name %>
+      <% end %>
+        <div class="card-info">
+          <div class="card-info-container">
+            <h2><%= squid.name %></h2>
+            <span class="card-price">$<%= squid.price %> per day</span>
+          </div>
           <p><%= squid.description.truncate(150) %></p>
         </div>
       </div>
