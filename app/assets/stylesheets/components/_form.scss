@@ -2,3 +2,32 @@
   display: flex;
   justify-content: space-between;
 }
+
+.form-container {
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.simple_form {
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba(230, 211, 248, 0.8);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.form-inputs {
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.form-actions button {
+  display: block;
+  margin: 0 auto;
+}
