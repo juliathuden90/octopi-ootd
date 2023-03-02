@@ -8,6 +8,11 @@
 
 require "open-uri"
 
+# Destroy bookings
+puts "Destroy all bookings"
+Booking.destroy_all
+puts "All bookings succesfully destroyed"
+
 # Destroy squids
 puts "Destroy all squids"
 Squid.destroy_all
@@ -17,11 +22,6 @@ puts "All squids succesfully destroyed"
 puts "Destroy all users"
 User.destroy_all
 puts "All users succesfully destroyed"
-
-# # Destroy bookings
-# puts "Destroy all bookings"
-# Booking.destroy_all
-# puts "All bookings succesfully destroyed"
 
 # Create Users
 puts "creating Users"
