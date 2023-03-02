@@ -17,50 +17,31 @@ body {
     object-fit: cover;
 }
 
-// h1, h2 {
-//     -webkit-text-stroke: 1px white;
-//     text-stroke: 1px white;
-//   }
-
-// header h1, h2 {
-//     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-//   }
-  
 .landing-page-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 
-    h1, h2 {
-        text-shadow: 1px -1px 25px rgb(255, 249, 249);
-    }
-    
+  h1 {
+    font-size: 45px;
+    color: white;
+    text-shadow: 1px -1px 5px #010101;
+  }
 
-    .btn-flat {
-        width: fit-content;
-        padding: 10px 100px;
-    }
+  h2 {
+    color: white;
+    text-shadow: 1px -1px 5px #010101;
+  }
+
+
+  .btn-flat {
+      width: fit-content;
+      padding: 10px 100px;
+  }
 }
-
-// .landing-page-text {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     margin: auto;
-//     align-items: center;
-
-//     .btn-flat {
-//         width: fit-content;
-//         padding: 10px 100px;
-//     }
-// }
-
-// body {
-//     background-color: #FDF4D5;
-//   }
