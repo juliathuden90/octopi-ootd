@@ -4,8 +4,8 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.where(user: current_user)
-    my_octopuses = Squid.where(user: current_user)
-    @my_octo_bookings = Booking.where(squid: my_octopuses)
+    @my_octopuses = Squid.where(user: current_user)
+    @my_octo_bookings = Booking.where(squid: @my_octopuses)
   end
 
   def new
