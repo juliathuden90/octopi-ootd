@@ -2,7 +2,10 @@
       <div class="container-fluid">
         <%= link_to root_path, class: "navbar-brand" do %>
           <%# <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-          <%= tag.i class: "fab fa-octopus-deploy", style: "font-size: 2.5rem" %>
+          <div class="d-flex align-items-center">
+            <%= tag.i class: "fab fa-octopus-deploy", style: "font-size: 2.5rem" %>
+            <p class="m-0 ms-1 logo-text">octoπ</p>
+          </div>
         <% end %>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
