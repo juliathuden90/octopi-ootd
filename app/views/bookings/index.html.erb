@@ -1,5 +1,5 @@
 <div class="container">
-  <br>
+  <div class="purple-section">
   <h1>The bookings I will attend</h1>
   <% if @bookings.empty? %>
     <p>You don't seem to have any bookings</p>
@@ -10,6 +10,7 @@
       <p>Status: <%= booking.status %></p>
     <% end %>
   <% end %>
+  </div>
 
   <%# Add if statment so below is only rendered id the user has squids %>
   <% unless @my_octopuses.empty? %>
