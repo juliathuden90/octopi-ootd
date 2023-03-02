@@ -1,8 +1,6 @@
 <div class="container text-center">
   <br>
   <h1>Add Your Octopus!</h1>
-
-
   <%= simple_form_for(@squid, html: { class: "text-start" }) do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>
@@ -12,6 +10,6 @@
     <div class="cancle-btn-div">
       <%= f.button :submit, class: 'btn btn-flat', style: 'font-weight: bold; margin-right: 10px', value: 'Add Octopus' %>
    <% end %>
-      <%= link_to "Cancel", squids_path, class:"btn btn-flat" %>
+    <%= link_to "Cancel", squids_path, class:"btn btn-flat" %>
     </div>
 </div>

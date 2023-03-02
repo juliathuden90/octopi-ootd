@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "squids#home"
   resources :squids, only: [:index, :show, :new, :create] do
-    resources :bookings, only: [:new, :create, :update, :edit]
+    resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:index]
+  resources :bookings, only: [:index, :update, :edit]
 end

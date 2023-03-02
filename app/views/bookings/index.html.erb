@@ -1,5 +1,18 @@
 <div class="container">
-<br>
-<h1>Coming Soon...</h1>
-<p>you will soon be able to book an octopus 🐙<p>
+  <br>
+  <h1>The bookings I will attend</h1>
+  <% if @bookings.empty? %>
+    <p>You don't seem to have any bookings</p>
+  <% else %>
+    <% @bookings.each do |booking| %>
+      <p>Squid: <%= booking.squid.name %></p>
+      <p>Date: <%= booking.rent_date %></p>
+      <p>Status: <%= booking.status %></p>
+    <% end %>
+  <% end %>
+
+  <%# Add if statment so below is only rendered id the user has squids %>
+  <% unless @my_octopuses.empty? %>
+    <%= render "shared/octopus_bookings" %>
+  <% end %>
 </div>

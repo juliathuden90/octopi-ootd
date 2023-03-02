@@ -1,9 +1,11 @@
 class BookingsController < ApplicationController
-  # before_action :set_booking, only: [:create]
+  before_action :set_booking, only: [:edit, :update]
   before_action :set_squid, only: [:new, :create]
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
+    @my_octopuses = Squid.where(user: current_user)
+    @my_octo_bookings = Booking.where(squid: @my_octopuses)
   end
 
   def new
@@ -22,10 +24,17 @@ class BookingsController < ApplicationController
     end
   end
 
-  def update
+  def edit
   end
 
-  def edit
+  def update
+    if params["commit"] == "Accept"
+      @booking.status = "Accept"
+    else
+      @booking.status = "Reject"
+    end
+    @booking.save
+    redirect_to bookings_path
   end
 
   private

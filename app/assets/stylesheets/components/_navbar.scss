@@ -1,4 +1,5 @@
 .navbar-lewagon {
+  height: 55px;
   justify-content: space-between;
   padding: 0px !important;
   background-color: $light-purple;
@@ -14,4 +15,9 @@
 
 .fa-octopus-deploy {
   color: $dark-purple;
+}
+
+.logo-text {
+  color: $dark-purple;
+  font-weight: bolder;
 }
