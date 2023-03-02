@@ -1,8 +1,2 @@
-<div class="container">
-<br>
-<h1>Accept or reject the following bookings</h1>
-<%= simple_form_for(@booking, html: { class: "text-start" }) do |f| %>
-      <%= f.button :submit, class: 'btn btn-flat', style: 'font-weight: bold; margin-right: 10px', value: 'Accept' %>
-      <%= f.button :submit, class: 'btn btn-flat', style: 'font-weight: bold; margin-right: 10px', value: 'Reject' %>
-  <% end %>
-</div>
+
+<%= render 'edit_actions', booking: @booking%>

@@ -11,5 +11,8 @@
     <% end %>
   <% end %>
 
-  <%= render "shared/octopus_bookings" %>
+  <%# Add if statment so below is only rendered id the user has squids %>
+  <% unless @my_octopuses.empty? %>
+    <%= render "shared/octopus_bookings" %>
+  <% end %>
 </div>

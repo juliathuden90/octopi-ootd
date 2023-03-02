@@ -9,8 +9,9 @@
       <p>Date: <%= booking.rent_date %></p>
       <p>Booker: <%= booking.user.first_name %></p>
       <p>Status: <%= booking.status %></p>
-      <%= link_to "Edit your booking", edit_booking_path(booking) %>
-      <hr>
+      <% if booking.status == "pending" %>
+        <%= render "bookings/edit_actions", booking: booking %>
+      <% end %>
     <% end %>
   <% end %>
 </div>
