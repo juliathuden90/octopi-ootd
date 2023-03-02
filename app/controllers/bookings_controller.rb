@@ -28,13 +28,12 @@ class BookingsController < ApplicationController
   end
 
   def update
-    if params["commit"] == "Accept"
-      @booking.status = "Accept"
+    @booking.status = params[:booking][:status]
+    if @booking.save
+      redirect_to bookings_path
     else
-      @booking.status = "Reject"
+      render 'squids/show', status: :unprocessable_entity
     end
-    @booking.save
-    redirect_to bookings_path
   end
 
   private
