@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to bookings_path
     else
-      redirect_to new_squid_booking_path(@squid)
+      redirect_to squid_path(@squid)
     end
   end
 
