@@ -1,8 +1,11 @@
 .navbar-lewagon {
+  position: sticky;
+  top: 0;
   height: 55px;
   justify-content: space-between;
   padding: 0px !important;
   background-color: $light-purple;
+  z-index: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
