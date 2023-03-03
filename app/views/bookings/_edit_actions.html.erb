@@ -4,6 +4,6 @@
 <%# end %>
 
 <div class="d-flex">
-<%= button_to "Accept", booking_path(booking), method: :patch, class: 'btn btn-flat-small', name: "booking[status]", value: "Accept"%>
-<%= button_to "Reject", booking_path(booking), method: :patch, class: 'btn btn-flat-small', name: "booking[status]", value: "Reject"%>
+<%= button_to "Accept", booking_path(booking), method: :patch, class: 'btn btn-flat-small', name: "booking[status]", value: "Accepted"%>
+<%= button_to "Reject", booking_path(booking), method: :patch, class: 'btn btn-flat-small', name: "booking[status]", value: "Rejected"%>
 </div>

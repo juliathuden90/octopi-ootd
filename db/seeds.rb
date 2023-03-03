@@ -82,7 +82,7 @@ squid_six.photo.attach(io: file, filename: "squid_six.png", content_type: "image
 squid_six.save
 
 file = URI.open("https://images.unsplash.com/photo-1558729924-714b0a8e0574?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80")
-squid_seven = Squid.new(name: "Bubble", description: "Bubble is a curious and playful octopus who loves to interact with humans. She's always eager to learn new things and explore new places. With her bubbly personality and friendly nature, Bubble is great for beginner divers.", price: 45, user_id: julia.id)
+squid_seven = Squid.new(name: "Bubble", description: "Bubble is a curious and playful octopus who loves to interact with humans. She's always eager to learn new things and explore new places. With her bubbly personality and friendly nature, Bubble is great for beginner divers.", price: 45, user_id: jensen.id)
 squid_seven.photo.attach(io: file, filename: "squid_seven.png", content_type: "image/png")
 squid_seven.save
 
@@ -102,7 +102,7 @@ squid_ten.photo.attach(io: file, filename: "squid_nine.png", content_type: "imag
 squid_ten.save
 
 file = URI.open("https://images.unsplash.com/photo-1561479639-747efc0d0bf2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2380&q=80")
-squid_eleven = Squid.new(name: "Atlas", description: "Atlas is a strong and determined octopus who can move heavy objects with ease. He's a bit of a workaholic and loves to help his diving buddies with their underwater tasks. Atlas is great for technical divers who need an extra set of hands for their equipment or underwater construction projects.", price: 85, user_id: julia.id)
+squid_eleven = Squid.new(name: "Atlas", description: "Atlas is a strong and determined octopus who can move heavy objects with ease. He's a bit of a workaholic and loves to help his diving buddies with their underwater tasks. Atlas is great for technical divers who need an extra set of hands for their equipment or underwater construction projects.", price: 85, user_id: felicia.id)
 squid_eleven.photo.attach(io: file, filename: "squid_nine.png", content_type: "image/png")
 squid_eleven.save
 
@@ -111,9 +111,13 @@ puts "Created #{Squid.count} squids"
 # Create bookings
 puts "Creating bookings"
 
-booking_one = Booking.new(rent_date: Date.today, user: jensen, squid: squid_seven, status: "pending")
+booking_one = Booking.new(rent_date: Date.today, user: felicia, squid: squid_one, status: "Accepted")
 booking_one.save
-booking_two = Booking.new(rent_date: Date.today, user: addy, squid: squid_seven, status: "pending")
+booking_two = Booking.new(rent_date: Date.new(2023, 4, 27), user: jensen, squid: squid_eleven, status: "Pending")
 booking_two.save
+booking_three = Booking.new(rent_date: Date.new(2023, 3, 16), user: julia, squid: squid_seven, status: "Accepted")
+booking_three.save
+booking_four = Booking.new(rent_date: Date.new(2023, 4, 28), user: julia, squid: squid_five, status: "Accepted")
+booking_four.save
 
 puts "Created #{Booking.count} bookings"
