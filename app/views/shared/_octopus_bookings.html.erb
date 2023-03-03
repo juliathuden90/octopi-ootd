@@ -1,5 +1,5 @@
 <div class="purple-section mb-4">
-  <h1>The bookings of my octoπ</h1>
+  <h1>My Octoπ Trips</h1>
   <% if @my_octo_bookings.empty? %>
     <p>None of your octoπ's seem to booked</p>
   <% else %>
@@ -12,7 +12,7 @@
         <% end %>
         <div class="card-product-infos d-flex card-buttons">
           <div>
-            <h2>Squid: <%= booking.squid.name %></h2>
+            <h2><%= booking.squid.name %></h2>
             <p><strong>Date: </strong><%= booking.rent_date %></p>
             <p><strong>Booker: </strong><%= booking.user.first_name %></p>
             <p><strong>Status: </strong><%= booking.status %></p>

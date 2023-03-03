@@ -1,6 +1,6 @@
 <div class="container">
   <div class="purple-section">
-  <h1>The bookings I will attend</h1>
+  <h1>My Trips</h1>
   <% if @bookings.empty? %>
     <p>You don't seem to have any bookings</p>
   <% else %>
@@ -12,7 +12,7 @@
           <%= cl_image_tag booking.squid.photo.key, class: "show-page-image" %>
         <% end %>
         <div class="card-product-infos">
-          <h2>Squid: <%= booking.squid.name %></h2>
+          <h2><%= booking.squid.name %></h2>
           <p><strong>Date: </strong><%= booking.rent_date %></p>
           <p><strong>Owner: </strong><%= booking.squid.user.first_name %></p>
           <p><strong>Status: </strong><%= booking.status %></p>
