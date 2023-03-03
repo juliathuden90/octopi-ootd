@@ -1,6 +1,7 @@
 <div class="container">
 <br>
 <br>
+  <%= link_to '<i class="fa-solid fa-arrow-left"></i> BACK'.html_safe, squids_path, class:"back-link" %>
   <div class="show-page-container">
       <% if @squid.photo.key.nil? %>
         <%= image_tag "octopus-missing.avfi", class: "show-page-image" %>

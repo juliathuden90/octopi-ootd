@@ -1,6 +1,7 @@
 .cancle-btn-div {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-container {
@@ -12,7 +13,7 @@
 }
 
 .simple_form {
-  width: 80%;
+  width: 100%;
   max-width: 500px;
   padding: 20px;
   background-color: rgba(230, 211, 248, 0.8);
