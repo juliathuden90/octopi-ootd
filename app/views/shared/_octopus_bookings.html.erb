@@ -18,7 +18,7 @@
             <p><strong>Status: </strong><%= booking.status %></p>
           </div>
           <div class="card-button-div">
-          <% if booking.status == "pending" %>
+          <% if booking.status == "Pending" %>
             <%= render "bookings/edit_actions", booking: booking %>
           <% end %>
           </div>
