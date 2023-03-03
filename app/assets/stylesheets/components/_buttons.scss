@@ -38,6 +38,11 @@
   transition: background 0.3s ease;
   width: 100px;
   margin-left: 1em;
+
+  &:hover {
+    background: #A45CEC;
+    color: white;
+  }
 }
 
 .btn-gradient {
