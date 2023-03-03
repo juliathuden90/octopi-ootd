@@ -1,16 +1,29 @@
-<div class="purple-section">
+<div class="purple-section mb-4">
   <h1>The bookings of my octoπ</h1>
   <% if @my_octo_bookings.empty? %>
     <p>None of your octoπ's seem to booked</p>
   <% else %>
     <% @my_octo_bookings.each do |booking| %>
-      <p>Squid: <%= booking.squid.name %></p>
-      <p>Date: <%= booking.rent_date %></p>
-      <p>Booker: <%= booking.user.first_name %></p>
-      <p>Status: <%= booking.status %></p>
-      <% if booking.status == "pending" %>
-        <%= render "bookings/edit_actions", booking: booking %>
-      <% end %>
+      <div class="card-product">
+        <% if booking.squid.photo.key.nil? %>
+          <%= image_tag "octopus-missing.avfi", class: "show-page-image" %>
+        <% else %>
+          <%= cl_image_tag booking.squid.photo.key, class: "show-page-image" %>
+        <% end %>
+        <div class="card-product-infos d-flex card-buttons">
+          <div>
+            <h2>Squid: <%= booking.squid.name %></h2>
+            <p><strong>Date: </strong><%= booking.rent_date %></p>
+            <p><strong>Booker: </strong><%= booking.user.first_name %></p>
+            <p><strong>Status: </strong><%= booking.status %></p>
+          </div>
+          <div class="card-button-div">
+          <% if booking.status == "pending" %>
+            <%= render "bookings/edit_actions", booking: booking %>
+          <% end %>
+          </div>
+        </div>
+      </div>
     <% end %>
   <% end %>
 </div>

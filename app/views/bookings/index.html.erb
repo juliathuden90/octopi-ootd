@@ -5,9 +5,19 @@
     <p>You don't seem to have any bookings</p>
   <% else %>
     <% @bookings.each do |booking| %>
-      <p>Squid: <%= booking.squid.name %></p>
-      <p>Date: <%= booking.rent_date %></p>
-      <p>Status: <%= booking.status %></p>
+      <div class="card-product">
+        <% if booking.squid.photo.key.nil? %>
+          <%= image_tag "octopus-missing.avfi", class: "show-page-image" %>
+        <% else %>
+          <%= cl_image_tag booking.squid.photo.key, class: "show-page-image" %>
+        <% end %>
+        <div class="card-product-infos">
+          <h2>Squid: <%= booking.squid.name %></h2>
+          <p><strong>Date: </strong><%= booking.rent_date %></p>
+          <p><strong>Owner: </strong><%= booking.squid.user.first_name %></p>
+          <p><strong>Status: </strong><%= booking.status %></p>
+        </div>
+      </div>
     <% end %>
   <% end %>
   </div>
