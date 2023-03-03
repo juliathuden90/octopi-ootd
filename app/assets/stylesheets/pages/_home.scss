@@ -5,16 +5,26 @@ body {
 }
 
 .landing-page-container {
-    display: flex;
-    text-align: center;
-    overflow: hidden;
-    height: calc(100vh - 55px);
+  display: flex;
+  text-align: center;
+  overflow: hidden;
+  background-color: #c7bcd38a;
+  background-blend-mode: overlay;
+  background-image: url("http://prod-upp-image-read.ft.com/4543ced6-0868-11e7-97d1-5e720a26771b");
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  height: 100vh;
 }
+
 
 .landing-page-image {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    background-color: #c7bcd38a;
+    background-blend-mode: overlay;
+    background-image: url("https://www.premuda-diving.com/pic/premuda_diving_007.jpg");
 }
 
 .landing-page-text {
