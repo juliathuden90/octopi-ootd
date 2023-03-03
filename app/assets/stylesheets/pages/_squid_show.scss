@@ -1,14 +1,18 @@
 .show-page-container {
   display: flex;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 40px;
-  background-color: $light-purple;
-  background-blend-mode: overlay;
-  margin-bottom: 100px;
+  background-color: rgba(230, 211, 248, 0.8);
+  // background-blend-mode: overlay;
+  margin-bottom: 30px;
+}
+
+.centered-content {
+  padding-top: 25px;
 }
 
 .show-page-image {
-  border-radius: 5px;
+  border-radius: 20px;
   height: 550px;
   width: 50%;
   object-fit: cover;
@@ -17,7 +21,8 @@
 
 .show-page-text {
   display: flex;
-  padding: 40px;
+  // padding: 40px;
+  padding-left: 40px;
   width: 50%;
   flex-direction: column;
   justify-content: center;
@@ -32,6 +37,7 @@
   color: $white;
   margin-bottom: 10px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   text-shadow: 1px 1px 3px #1d1d1d;
+  padding-bottom: 10px;
 }
